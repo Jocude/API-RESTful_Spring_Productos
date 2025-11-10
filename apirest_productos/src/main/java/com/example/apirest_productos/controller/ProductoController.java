@@ -34,5 +34,10 @@ public class ProductoController {
         iProducto.deleteById(id);
     }
 
+    @PutMapping
+    public Producto update(@RequestBody Producto producto){
+        return iProducto.update(producto);
+    }
+
 
 }

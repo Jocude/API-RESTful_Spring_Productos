@@ -10,4 +10,6 @@ public interface IProducto {
 
     Producto findById(Integer id);
     void deleteById(Integer id);
+    Producto update(Producto producto);
+
 }

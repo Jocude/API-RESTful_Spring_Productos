@@ -34,4 +34,16 @@ public class ProductoServiceImpl implements IProducto{
     public void deleteById(Integer id) {
         productoRepository.deleteById(id);
     }
+
+    @Override
+    public Producto update(Producto producto) {
+        Producto productoBDD = productoRepository.findById(producto.getId()).get();
+
+        productoBDD.setNombre(producto.getNombre());
+        productoBDD.setDetalle(producto.getDetalle());
+        productoBDD.setPrecio(producto.getPrecio());
+       //SOLO TOCAMOS ESTOS 3 PORQUE LOS OTROS LOS ACTUALIZA EL PROGRAMA POR DEFECTO
+
+        return productoRepository.save(productoBDD);
+    }
 }
