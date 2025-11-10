@@ -1,4 +1,4 @@
-package com.example.apirest_productos;
+package com.example.apirest_productos.entity;
 
 import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
